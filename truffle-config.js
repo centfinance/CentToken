@@ -18,14 +18,13 @@
  *
  */
 
-// const fs = require('fs');
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const Web3 = require('web3');
 const web3 = new Web3();
 require('ts-node/register');
 
 const infuraKey = 'fj4jll3k.....';
-const mnemonicPhrase = process.env.MNEMONIC; // fs.readFileSync('.secret').toString().trim();
+const mnemonicPhrase = process.env.MNEMONIC;
 
 module.exports = {
     test_file_extension_regexp: /.*\.ts$/,
@@ -138,7 +137,7 @@ module.exports = {
     // Configure your compilers
     compilers: {
         solc: {
-            version: '0.6.10', // Fetch exact version from solc-bin (default: truffle's version)
+            version: '0.8.0', // Fetch exact version from solc-bin (default: truffle's version)
             settings: { // See the solidity docs for advice about optimization and evmVersion
                 optimizer: {
                     enabled: true,
